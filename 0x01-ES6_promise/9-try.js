@@ -1,8 +1,16 @@
-function divideFunction(dividend, divisor) {
-  if (divisor === 0) {
-    throw new Error("cannot divide by 0");
+function guardrail(mathFunction) {
+  const queue = [];
+
+  try {
+    const result = mathFunction();
+    queue.push(result);
+  } catch (error) {
+    queue.push(error.message);
+  } finally {
+    queue.push('Guardrail was processed');
   }
-  return dividend / divisor;
+
+  return queue;
 }
 
-export default divideFunction;
+export default guardrail;
