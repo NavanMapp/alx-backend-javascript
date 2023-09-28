@@ -1,3 +1,6 @@
-function getResponseFromAPI() {
-    return new Promise(() => {});
+function getFullResponseFromAPI(){
+    return new Promise(() => {
+    });
 }
+
+export default getFullResponseFromAPI;
