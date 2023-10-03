@@ -9,3 +9,4 @@ export default function cleanSet(set, startString) {
     }
     return cleanedValues.join('-');
   }
+  
